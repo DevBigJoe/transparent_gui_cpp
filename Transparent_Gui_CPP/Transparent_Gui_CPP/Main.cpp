@@ -1,7 +1,22 @@
+//STD
 #include <iostream>
+#include <Windows.h>
 
-int main() {
-    // Gibt "Hello, World!" auf dem Bildschirm aus
-    std::cout << "Hello, World!" << std::endl;
+//Local
+#include "MainForm.h"
+
+[System::STAThreadAttribute]
+int main(cli::array<System::String^>^ args)
+{
+    FreeConsole();
+       
+    // Windows Forms vorbereiten
+    System::Windows::Forms::Application::EnableVisualStyles();
+    System::Windows::Forms::Application::SetCompatibleTextRenderingDefault(false);
+
+    // MainForm aus dem Namespace erstellen
+    System::Windows::Forms::Form^ form = gcnew TransparentGuiCPP::MainForm();
+    System::Windows::Forms::Application::Run(form);
+
     return 0;
 }
