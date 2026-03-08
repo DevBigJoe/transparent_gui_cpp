@@ -10,11 +10,11 @@ int main(cli::array<System::String^>^ args)
 {
     FreeConsole();
        
-    // Windows Forms vorbereiten
+    // Windows Forms
     System::Windows::Forms::Application::EnableVisualStyles();
     System::Windows::Forms::Application::SetCompatibleTextRenderingDefault(false);
 
-    // MainForm aus dem Namespace erstellen
+    // MainForm
     System::Windows::Forms::Form^ form = gcnew TransparentGuiCPP::MainForm();
     System::Windows::Forms::Application::Run(form);
 
